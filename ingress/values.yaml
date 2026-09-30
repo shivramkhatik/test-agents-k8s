@@ -1,0 +1,12 @@
+namespace: default
+
+ingress:
+  enabled: true
+  className: nginx
+  clusterIssuer: letsencrypt-prod
+  tlsSecretName: testagents-cert
+  healthProbRequestPath: /healthz
+  host: angular.4.187.145.117.nip.io
+  appName: testagents
+  appServiceName: testagents-ngapp-service
+  appServicePort: 80
